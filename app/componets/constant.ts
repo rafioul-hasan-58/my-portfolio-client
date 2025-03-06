@@ -4,7 +4,7 @@ import { SiJirasoftware } from "react-icons/si";
 import { CgWebsite } from "react-icons/cg";
 import { FaInnosoft } from "react-icons/fa";
 import { BsRobot } from "react-icons/bs";
-import portfolio_img_01 from '../../assets/portfolio-01.jpg'
+import { FiFacebook, FiInstagram, FiLinkedin } from "react-icons/fi";
 export const doData = [
     {
         id: 1,
@@ -45,6 +45,9 @@ export const doData = [
     }
 ]
 
-export const portfolioData = [
-  
-]
+// Social Icons Array with Defined Type
+export const socialIcons = [
+    { id: 1, icon: FiFacebook },
+    { id: 2, icon: FiInstagram },
+    { id: 3, icon: FiLinkedin }
+];

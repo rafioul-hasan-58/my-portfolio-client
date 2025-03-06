@@ -3,6 +3,8 @@
 import Blogs from "./blogs/page";
 import Portfolio from "./portfolio/page";
 import About from "./slices/About";
+import Contact from "./slices/Contact";
+import Footer from "./slices/Footer";
 import Header from "./slices/Header";
 import MySkills from "./slices/MySkills";
 import Navbar from "./slices/Navbar";
@@ -20,6 +22,8 @@ export default function Home() {
       <Portfolio />
       <MySkills />
       <Blogs />
+      <Contact />
+      <Footer/>
     </>
   );
 }

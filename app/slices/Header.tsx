@@ -1,19 +1,9 @@
 import { assets } from "@/assets/assets";
 import Image, { StaticImageData } from "next/image";
-import { JSX } from "react";
-import { FiFacebook, FiInstagram, FiLinkedin } from "react-icons/fi";
-import { Typewriter } from 'react-simple-typewriter'
-type SocialIconType = {
-    id: number;
-    icon: JSX.Element;
-};
 
-// Social Icons Array with Defined Type
-const socialIcons: SocialIconType[] = [
-    { id: 1, icon: <FiFacebook /> },
-    { id: 2, icon: <FiInstagram /> },
-    { id: 3, icon: <FiLinkedin /> }
-];
+import { Typewriter } from 'react-simple-typewriter'
+import { SocialContact } from "../componets/card/BlogCard";
+
 type AssetType = {
     id: number;
     src: string | StaticImageData;
@@ -42,26 +32,13 @@ const Header = () => {
                             typeSpeed={80}
                             deleteSpeed={80}
                             delaySpeed={1000}
-                        /> 
+                        />
                         <span className=" text-[#FF0050]">|</span>
                     </p>
                     <p className="lg:w-[580px] py-4  text-gray-600 text-lg leading-9">I use animation as a third dimension by which to simplify experiences and kuiding thro each and every interaction. I’m not adding motion just to spruce things up, but doing it in ways that.</p>
 
                     <div className="flex justify-between mt-6">
-                        <div>
-                            <p className="uppercase text-gray-500 my-4">f i n d <span className="mx-2">w i t h</span> m e</p>
-                            <div className="mt-1 flex gap-5">
-                                {socialIcons.map((item) => (
-                                    <div
-                                        key={item.id}
-                                        className="w-16 text-2xl h-16 flex justify-center items-center bg-white rounded-md text-gray-500 hover:text-white shadow-md cursor-pointer hover:bg-[#FF0050] transition-all duration-300 hover:-translate-y-1"
-                                    >
-                                        {item.icon}
-                                    </div>
-                                ))}
-
-                            </div>
-                        </div>
+                        <SocialContact />
                         <div>
                             <p className="uppercase text-gray-500 my-4">b e s t<span className="mx-2">s k i l l s</span>i n </p>
                             <div className="flex gap-5">

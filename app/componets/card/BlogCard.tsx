@@ -1,11 +1,11 @@
-import { IBlog} from "@/src/types";
+import { IBlog } from "@/src/types";
 import Image from "next/image";
 import Link from "next/link";
 import { AiFillLike } from "react-icons/ai";
 import { MdArrowOutward } from "react-icons/md";
 
-const BlogCard = ({ item }: { item: IBlog}) => {
-    console.log(item);
+const BlogCard = ({ item }: { item: IBlog }) => {
+    // console.log(item);
     return (
         <div>
             <div className=" lg:w-[440px] bg-gradient-to-br from-gray-100 via-gray-50 to-white p-8 rounded-xl shadow-xl hover:shadow-lg transition-shadow duration-300 shrink"
@@ -41,3 +41,27 @@ const BlogCard = ({ item }: { item: IBlog}) => {
 };
 
 export default BlogCard;
+
+import React from 'react';
+import { socialIcons } from "../constant";
+
+export const SocialContact = () => {
+    return (
+        <div>
+            <div>
+                <p className="uppercase text-gray-500 my-4">f i n d <span className="mx-2">w i t h</span> m e</p>
+                <div className="mt-1 flex gap-5">
+                    {socialIcons.map((item) => (
+                        <div
+                            key={item.id}
+                            className="w-16 text-2xl h-16 flex justify-center items-center bg-white rounded-md text-gray-500 hover:text-white shadow-md cursor-pointer hover:bg-[#FF0050] transition-all duration-300 hover:-translate-y-1"
+                        >
+                            < item.icon />
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </div>
+    );
+};
+
