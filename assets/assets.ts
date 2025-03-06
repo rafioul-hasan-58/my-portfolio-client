@@ -15,7 +15,6 @@ import logo from './logo.png'
 import logo_dark from './logo_dark.png'
 import mail_icon from './mail_icon.png'
 import mail_icon_dark from './mail_icon_dark.png'
-import profile_img from './profile-img.png'
 import download_icon from './download-icon.png'
 import hand_icon from './hand-icon.png'
 import header_bg_color from './header-bg-color.png'
@@ -35,6 +34,12 @@ import right_arrow from './right-arrow.png'
 import send_icon from './send-icon.png'
 import right_arrow_bold_dark from './right-arrow-bold-dark.png'
 import right_arrow_bold from './right-arrow-bold.png'
+import portfolio_img_1 from './portfolio-01.jpg'
+import portfolio_img_2 from './portfolio-02.jpg'
+import portfolio_img_3 from './portfolio-03.jpg'
+import portfolio_img_4 from './portfolio-04.jpg'
+import portfolio_img_5 from './portfolio-05.jpg'
+import portfolio_img_6 from './portfolio-06.jpg'
 export const assets = {
     user_image,
     code_icon,
@@ -57,7 +62,6 @@ export const assets = {
     header_bg_color,
     hand_icon,
     download_icon,
-    profile_img,
     code_icon_dark,
     edu_icon,
     edu_icon_dark,
@@ -72,26 +76,13 @@ export const assets = {
     logo,
     logo_dark,
     mail_icon,
-    mail_icon_dark
+    mail_icon_dark,
+    portfolio_img_1,
+    portfolio_img_2,
+    portfolio_img_3,
+    portfolio_img_4,
+    portfolio_img_5,
+    portfolio_img_6
 }
 
-export const infoList=[
-    {
-        icon:assets.code_icon,
-        iconDark:assets.code_icon_dark,
-        title:'Languages',
-        description:'HTML,CSS,Javascript,React,Next'
-    },
-    {
-        icon:assets.edu_icon,
-        iconDark:assets.edu_icon_dark,
-        title:'Education',
-        description:'Diploma in Computer Science & Engineering'
-    },
-    {
-        icon:assets.project_icon,
-        iconDark:assets.project_icon_dark,
-        title:'Languages',
-        description:'Built more than five project'
-    },
-]
+

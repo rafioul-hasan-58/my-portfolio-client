@@ -20,7 +20,7 @@ const Navbar = () => {
                     <Link className="font-Ovo" href='#top'> <li>About</li></Link>
                     <Link className="font-Ovo" href='#top'> <li>Projects</li></Link>
                     <Link className="font-Ovo" href='#top'> <li>Blogs</li></Link>
-                    <Link className="font-Ovo" href='#top'> <li>Contact</li></Link>
+                    <Link className="font-Ovo" href='/dashboard'> <li>dashboard</li></Link>
                 </ul>
                 <div className="flex items-center gap-4">
                     <button>

@@ -1,0 +1,40 @@
+{
+    "portfolioData": [
+        {
+            "id": 1,
+            "image": "https://i.ibb.co.com/6Jbv7Tps/portfolio-01.jpg",
+            "title": "Web Development",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate distinctio assumenda explicabo veniam temporibus eligendi. Consectetur adipisicing elit. Cupiditate distinctio assumenda. Dolorum alias suscipit rerum maiores aliquam earum odit, nihil culpa quas iusto hic minus!"
+        },
+        {
+            "id": 2,
+            "image": "https://i.ibb.co.com/WW1DC6hY/portfolio-02.jpg",
+            "title": "Web Development",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate distinctio assumenda explicabo veniam temporibus eligendi. Consectetur adipisicing elit. Cupiditate distinctio assumenda. Dolorum alias suscipit rerum maiores aliquam earum odit, nihil culpa quas iusto hic minus!"
+        },
+        {
+            "id": 3,
+            "image": "https://i.ibb.co.com/yBGvtSmk/portfolio-03.jpg",
+            "title": "Web Development",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate distinctio assumenda explicabo veniam temporibus eligendi. Consectetur adipisicing elit. Cupiditate distinctio assumenda. Dolorum alias suscipit rerum maiores aliquam earum odit, nihil culpa quas iusto hic minus!"
+        },
+        {
+            "id": 4,
+            "image": "https://i.ibb.co.com/4RNwCg8S/portfolio-04.jpg",
+            "title": "Web Development",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate distinctio assumenda explicabo veniam temporibus eligendi. Consectetur adipisicing elit. Cupiditate distinctio assumenda. Dolorum alias suscipit rerum maiores aliquam earum odit, nihil culpa quas iusto hic minus!"
+        },
+        {
+            "id": 5,
+            "image": "https://i.ibb.co.com/twJN61xM/portfolio-05.jpg",
+            "title": "Web Development",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate distinctio assumenda explicabo veniam temporibus eligendi. Consectetur adipisicing elit. Cupiditate distinctio assumenda. Dolorum alias suscipit rerum maiores aliquam earum odit, nihil culpa quas iusto hic minus!"
+        },
+        {
+            "id": 6,
+            "image": "https://i.ibb.co.com/N6XJHScF/portfolio-06.jpg",
+            "title": "Web Development",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate distinctio assumenda explicabo veniam temporibus eligendi. Consectetur adipisicing elit. Cupiditate distinctio assumenda. Dolorum alias suscipit rerum maiores aliquam earum odit, nihil culpa quas iusto hic minus!"
+        }
+    ]
+}
