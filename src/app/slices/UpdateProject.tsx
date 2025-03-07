@@ -30,7 +30,7 @@ const UpdateProjectPage = ({ id }: { id: string }) => {
         const res = await axios.patch(`http://localhost:4000/update-project/${id}`, updatedData)
         if (res?.data.success) {
             toast.success(res?.data?.message)
-            router.push('/dashboard/all-projects')
+            router.push('/dashboard/projects')
         }
         // console.log(res.data);
     }

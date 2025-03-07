@@ -1,4 +1,5 @@
-import UpdateBlogPage from "@/app/slices/UpdateBlog";
+import UpdateBlogPage from "@/src/app/slices/UpdateBlog";
+
 
 const UpdateBlog = async ({ params }: { params: Promise<{ id: string }> }) => {
     const { id } = await params;

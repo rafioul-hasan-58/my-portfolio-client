@@ -29,7 +29,7 @@ const UpdateBlogPage = ({ id }: { id: string }) => {
         const res = await axios.patch(`http://localhost:4000/update-blog/${id}`, updatedData)
         if (res?.data.success) {
             toast.success(res?.data?.message)
-            router.push('/dashboard/all-blogs')
+            router.push('/dashboard/blogs')
         }
         // console.log(res.data);
     }

@@ -1,4 +1,5 @@
-import UpdateProjectPage from "@/app/slices/UpdateProject";
+import UpdateProjectPage from "@/src/app/slices/UpdateProject";
+
 
 
 const UpdateProject = async ({ params }: { params: Promise<{ id: string }> }) => {

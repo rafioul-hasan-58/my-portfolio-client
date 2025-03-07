@@ -23,13 +23,9 @@ const Navbar = () => {
                     <Link className="font-Ovo" href='/dashboard'> <li>dashboard</li></Link>
                 </ul>
                 <div className="flex items-center gap-4">
-                    <button>
-                        <Image src={assets.moon_icon} alt="" className="w-6" />
-                    </button>
-                    <a className="hidden lg:flex items-center gap-3 px-10 border border-gray-500 rounded-full ml-4 py-2.5 " href="#contact">Contact <Image src={assets.arrow_icon} className="w-3" alt="arrowico" /></a>
-                    <button onClick={() => setIsOpen(true)} className="block md:hidden ml-3">
-                        <Image src={assets.menu_black} alt="" className="w-6" />
-                    </button>
+                <Link href='/login'>
+                <button className="bg-[#FF0050] text-white py-1 px-4 hover:border hover:border-[#FF0050] hover:bg-white hover:text-[#FF0050]">Login</button>
+                </Link>
                 </div>
                 {/* mobile menu */}
                 <ul className={`flex md:hidden flex-col gap-4 px-10 py-20 fixed right-0 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition-transform duration-500 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
