@@ -3,7 +3,10 @@
 import { registerUser } from "@/src/actions/serverActions";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+
 import { useState } from "react";
+import { toast } from "sonner";
 const Register = () => {
    const [formData, setFormData] = useState({ email: "", password: "",name:"", remember: false });
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -11,12 +14,14 @@ const Register = () => {
         setFormData((prev) => ({ ...prev, [name]: type === "checkbox" ? checked : value }));
     };
 
-
+    const router=useRouter()
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         // console.log("Register data:", formData);
         // Handle registration logic here
         registerUser(formData)
+        toast.success('Registered Successfully')
+        router.push('/login')
         console.log('hi');
       };
     return (

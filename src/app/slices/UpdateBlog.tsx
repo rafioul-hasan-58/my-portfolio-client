@@ -1,16 +1,21 @@
 'use client';
+import { IBlog } from "@/src/types";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 
 import { useEffect, useState } from "react";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import { toast } from "sonner";
-const UpdateBlogPage = ({ id }: { id: string }) => {
-    const [blogData, setBlogs] = useState([]);
+
+interface UpdateBlogPageProps {
+    id: string;
+}
+const UpdateBlogPage: React.FC<UpdateBlogPageProps> = ({ id }) => {
+    const [blogData, setBlogs] = useState<IBlog | null>(null);
     const router = useRouter()
     useEffect(() => {
         const fetchBlogs = async () => {
-            const res = await fetch(`http://localhost:4000/get-single-blog/${id}`, { cache: 'force-cache' });
+            const res = await fetch(`https://my-fifth-assignment-server.vercel.app/get-single-blog/${id}`, { cache: 'no-store' });
             const data = await res.json();
 
             setBlogs(data?.data);
@@ -26,7 +31,7 @@ const UpdateBlogPage = ({ id }: { id: string }) => {
             image: data.image || blogData?.image,
             description: data.description || blogData?.description
         }
-        const res = await axios.patch(`http://localhost:4000/update-blog/${id}`, updatedData)
+        const res = await axios.patch(`https://my-fifth-assignment-server.vercel.app/update-blog/${id}`, updatedData)
         if (res?.data.success) {
             toast.success(res?.data?.message)
             router.push('/dashboard/blogs')

@@ -27,13 +27,13 @@ export const authOptions = {
             },
             async authorize(credentials, req) {
                 // Add logic here to look up the user from the credentials supplied
-                const res = await fetch(`${process.env.SERVER_URL}/api/auth/login`, {
+                const res = await fetch(`https://my-fifth-assignment-server.vercel.app/api/auth/login`, {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(credentials),
                 })
                 const user = await res.json()
-                console.log(user?.user);
+                // console.log(user?.user);
 
                 if (user) {
                     // Any object returned will be saved in `user` property of the JWT

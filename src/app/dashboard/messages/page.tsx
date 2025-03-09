@@ -1,20 +1,19 @@
 'use client';
-import { IPortfolio } from "@/src/types";
+import { IMessage } from "@/src/types";
 import axios from "axios";
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 
-const AllBlogs = () => {
-    const [blogData, setBlogs] = useState([]);
-    const fetchBlogs = async () => {
-        const res = await fetch(`https://my-fifth-assignment-server.vercel.app/get-all-blogs`, { cache: 'no-store' });
+const Messages = () => {
+    const [messageData, setMessages] = useState([]);
+    const fetchMessages = async () => {
+        const res = await fetch(`https://my-fifth-assignment-server.vercel.app/get-all-messages`, { cache: 'no-store' });
         const data = await res.json();
-        setBlogs(data?.data);
+        setMessages(data?.data);
     };
     useEffect(() => {
-        fetchBlogs();
+        fetchMessages();
     }, []);
     const deleteBlog = async (id: string) => {
         Swal.fire({
@@ -27,11 +26,11 @@ const AllBlogs = () => {
             confirmButtonText: "Yes, delete it!"
         }).then(async (result) => {
             if (result.isConfirmed) {
-                await axios.delete(`https://my-fifth-assignment-server.vercel.app/delete-blog/${id}`)
-                fetchBlogs()
+                await axios.delete(`https://my-fifth-assignment-server.vercel.app/delete-message/${id}`)
+                fetchMessages()
                 Swal.fire({
                     title: "Deleted!",
-                    text: "Your blog has been deleted.",
+                    text: "Message has been deleted.",
                     icon: "success"
                 });
             }
@@ -51,13 +50,13 @@ const AllBlogs = () => {
                                         <thead className="bg-[#FF0050] ">
                                             <tr>
                                                 <th scope="col" className="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-white ">
-                                                    Image
+                                                    Name
                                                 </th>
                                                 <th scope="col" className="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-white ">
-                                                    Title
+                                                    Subject
                                                 </th>
                                                 <th scope="col" className="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-white ">
-                                                    Update
+                                                    Details
                                                 </th>
                                                 <th scope="col" className="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-white ">
                                                     Delete
@@ -66,16 +65,17 @@ const AllBlogs = () => {
                                         </thead>
                                         <tbody className="bg-white divide-y divide-gray-200 ">
                                             {
-                                                blogData?.map((item: IPortfolio) => <tr key={item?._id} className="w-full">
+                                                messageData?.map((item: IMessage) => <tr key={item?._id} className="w-full">
+
                                                     <td className="px-4 py-4 text-sm text-gray-500  whitespace-nowrap">
-                                                        <Image src={item.image} alt="image" width={80} height={100} />
+                                                        {item.name}
                                                     </td>
                                                     <td className="px-4 py-4 text-sm text-gray-500  whitespace-nowrap">
-                                                        {item.title}
+                                                        {item.subject}
                                                     </td>
-                                                    <td className="px-4 py-4 text-sm text-gray-500  whitespace-nowrap">
-                                                        <Link href={`/dashboard/update-blog/${item._id}`}>
-                                                            <button className="bg-[#FF0050] text-white p-2 rounded-lg hover:border-[#FF0050]  hover:text-[#FF0005] hover:bg-white">Update</button>
+                                                    <td className="px-4 py-4 text-sm text-gray-500 whitespace-nowrap">
+                                                        <Link href={`/dashboard/messages/${item._id}`}>
+                                                            <button className=" text-white p-2 rounded-md bg-purple-400">View</button>
                                                         </Link>
                                                     </td>
                                                     <td className="px-4 py-4 text-sm text-gray-500 whitespace-nowrap">
@@ -95,4 +95,4 @@ const AllBlogs = () => {
     );
 };
 
-export default AllBlogs;
+export default Messages;

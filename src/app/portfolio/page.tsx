@@ -5,10 +5,10 @@ import { useEffect, useState } from "react";
 
 const Portfolio = () => {
     const [portfolioData, setProjects] = useState([]);
-
+    console.log(process.env.SERVER_URL)
     useEffect(() => {
         const fetchProjects = async () => {
-            const res = await fetch('http://localhost:4000/get-all-projects', { cache: 'no-store' });
+            const res = await fetch(`https://my-fifth-assignment-server.vercel.app/get-all-projects`, { cache: 'no-store' });
             const data = await res.json();
             setProjects(data?.data);
         };

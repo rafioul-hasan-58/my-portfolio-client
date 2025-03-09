@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect, useState } from "react";
 import BlogCard from "../componets/card/BlogCard";
 import { IBlog } from "@/src/types";
@@ -7,7 +9,7 @@ const Blogs = () => {
 
     useEffect(() => {
         const fetchBlogs = async () => {
-            const res = await fetch('http://localhost:4000/get-all-blogs', { cache: 'no-store' });
+            const res = await fetch(`https://my-fifth-assignment-server.vercel.app/get-all-blogs`, { cache: 'no-store' });
             const data = await res.json();
             setBlogs(data?.data);
         };

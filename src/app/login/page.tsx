@@ -22,7 +22,7 @@ const Login = () => {
             email: formData.email,
             password: formData.password,
             redirect: true,
-            callbackUrl: 'http://localhost:3000'
+            callbackUrl: 'https://my-portfolio-orpin-iota-84.vercel.app/dashboard'
         })
     }
 
@@ -30,10 +30,10 @@ const Login = () => {
         console.log(`Logging in with ${provider}`);
         // Implement NextAuth or other OAuth logic here
         if (provider === 'github') {
-            signIn('github', { callbackUrl: 'http://localhost:3000/dashboard' })
+            signIn('github', { callbackUrl: 'https://my-portfolio-orpin-iota-84.vercel.app/dashboard' })
         }
         else if (provider === 'google') {
-            signIn('google', { callbackUrl: 'http://localhost:3000/dashboard' })
+            signIn('google', { callbackUrl: 'https://my-portfolio-orpin-iota-84.vercel.app/dashboard' })
         }
     };
     return (

@@ -11,3 +11,11 @@ export interface IBlog {
     image: string;
     description: string
 }
+export interface IMessage {
+    _id: string;
+    name: string;
+    number: number;
+    subject: string;
+    message: string;
+    email: string;
+}

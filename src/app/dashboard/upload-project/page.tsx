@@ -7,7 +7,7 @@ import { toast } from "sonner";
 const UploadProject = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm()
     const onSubmit: SubmitHandler<FieldValues> = async (data) => {
-        const res = await axios.post('http://localhost:4000/upload-project', data)
+        const res = await axios.post(`https://my-fifth-assignment-server.vercel.app/upload-project`, data)
         if (res?.data.success) {
             toast.success(res?.data?.message)
             reset()

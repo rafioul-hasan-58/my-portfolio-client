@@ -36,8 +36,8 @@ const Sidebar = () => {
                         <GoProjectRoadmap className="text-xl" />
                         <span className="mx-2 text-[16px] font-medium">All Projects</span>
                     </Link>
-                    <Link href='/dashboard/all-projects' className={
-                        ` ${path === '/dashboard/all-projects' && 'bg-[#FF0050] text-white'} flex items-center hover:bg-[#FF0050] hover:text-white  px-3 py-2 text-[#FF0050] transition-colors duration-300 transform  `
+                    <Link href='/dashboard/messages' className={
+                        ` ${path === '/dashboard/messages' && 'bg-[#FF0050] text-white'} flex items-center hover:bg-[#FF0050] hover:text-white  px-3 py-2 text-[#FF0050] transition-colors duration-300 transform  `
                     }>
                         <FaRegMessage className="text-xl" />
                         <span className="mx-2 text-[16px] font-medium">Messages</span>

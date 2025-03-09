@@ -7,7 +7,7 @@ import { toast } from "sonner";
 const WriteBlog = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm()
     const onSubmit: SubmitHandler<FieldValues> = async (data) => {
-        const res = await axios.post('http://localhost:4000/write-blog', data)
+        const res = await axios.post(`https://my-fifth-assignment-server.vercel.app/write-blog`, data)
         if (res?.data.success) {
             toast.success(res?.data?.message)
             reset()

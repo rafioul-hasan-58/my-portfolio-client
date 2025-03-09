@@ -1,4 +1,5 @@
 'use client';
+import { IPortfolio } from "@/src/types";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 
@@ -6,11 +7,11 @@ import { useEffect, useState } from "react";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import { toast } from "sonner";
 const UpdateProjectPage = ({ id }: { id: string }) => {
-    const [portfolioData, setProject] = useState([]);
+    const [portfolioData, setProject] = useState<IPortfolio | null>(null);
     const router = useRouter()
     useEffect(() => {
         const fetchProjects = async () => {
-            const res = await fetch(`http://localhost:4000/get-single-project/${id}`, { cache: 'force-cache' });
+            const res = await fetch(`https://my-fifth-assignment-server.vercel.app/get-single-project/${id}`, { cache: 'no-store' });
             const data = await res.json();
 
             setProject(data?.data);
@@ -27,7 +28,7 @@ const UpdateProjectPage = ({ id }: { id: string }) => {
             link: data.link || portfolioData?.link,
             description: data.description || portfolioData?.description
         }
-        const res = await axios.patch(`http://localhost:4000/update-project/${id}`, updatedData)
+        const res = await axios.patch(`https://my-fifth-assignment-server.vercel.app/update-project/${id}`, updatedData)
         if (res?.data.success) {
             toast.success(res?.data?.message)
             router.push('/dashboard/projects')

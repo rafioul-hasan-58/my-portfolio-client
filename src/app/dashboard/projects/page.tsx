@@ -9,7 +9,7 @@ import Swal from "sweetalert2";
 const AllProjects = () => {
     const [portfolioData, setProjects] = useState([]);
     const fetchProjects = async () => {
-        const res = await fetch('http://localhost:4000/get-all-projects', { cache: 'no-store' });
+        const res = await fetch(`https://my-fifth-assignment-server.vercel.app/get-all-projects`, { cache: 'no-store' });
         const data = await res.json();
         setProjects(data?.data);
     };
@@ -27,7 +27,7 @@ const AllProjects = () => {
             confirmButtonText: "Yes, delete it!"
         }).then(async (result) => {
             if (result.isConfirmed) {
-                await axios.delete(`http://localhost:4000/delete-project/${id}`)
+                await axios.delete(`https://my-fifth-assignment-server.vercel.app/delete-project/${id}`)
                 fetchProjects()
                 Swal.fire({
                     title: "Deleted!",

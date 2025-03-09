@@ -7,7 +7,7 @@ import Swal from "sweetalert2";
 const Contact = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm()
     const onSubmit: SubmitHandler<FieldValues> = async (data) => {
-        const res = await axios.post('http://localhost:4000/send-message', data)
+        const res = await axios.post(`https://my-fifth-assignment-server.vercel.app/send-message`, data)
         if (res?.data?.success) {
             Swal.fire({
                 title: "Message sent!",
